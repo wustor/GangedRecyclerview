@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--背景色-->
+    <color name="white_back">#ffffff</color>
+    <color name="gray_back">#f0f0f0</color>
+    <color name="black_back">#333333</color>
+    <color name="green_back">#333333</color>
+    <color name="yellow_back">#ed731b</color>
+    <color name="red_back">#ca151e</color>
+    <color name="light_black">#666666</color>
+    <color name="blue_back">#FF216F</color>
+    <color name="trans_white">#99ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="coupon">#dddddd</color>
+
+
+    <!--字体颜色-->
+    <color name="gray_text">#999999</color>
+    <color name="gray_">#eeeeee</color>
+    <color name="white_text">#ffffff</color>
+    <color name="green_text">#FF216F</color>
+    <color name="tr_white">#4Defefef</color>
+    <color name="black_text">#1e1d1d</color>
+    <color name="b_text">#1E1D1D</color>
+    <color name="blue_text">#ff2070</color>
+    <color name="blue_dark_text">#2C66AD</color>
+    <color name="red_text">#ff2070</color>
+    <color name="no_color">#00000000</color>
+
+    <!--分界线颜色-->
+    <color name="line_color">#f0f0f0</color>
+    <color name="gray_line">#ffdddddd</color>
+    <color name="gray_tab_text">#f777</color>
+    <color name="gray_rb_text">#f444</color>
+    <color name="me_black">#1e1d1d</color>
+
+    <!--状态栏颜色-->
+    <color name="status_color">#ff5d5e</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+
+    <color name="color_00">#8A000000</color>
+    <!--第三方库的颜色-->
+    <color name="colorAccent">@color/blue</color>
+
+    <color name="blue">#0068cf</color>
+    <color name="green">#90BB8A</color>
+    <color name="red">#EE0000</color>
+    <color name="yellow">#ff9402</color>
+    <color name="partTranslucent">#39000000</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#808080</color>
+
+    <color name="tencent_tls_ui_white">#FFFFFF</color>
+    <color name="tencent_tls_ui_gray">#444444</color>
+    <color name="tencent_tls_ui_shadowgray">#CCCCCC</color>
+    <color name="tencent_tls_ui_deepgray">#777777</color>
+    <color name="tencent_tls_ui_countryCodeColor">#009900</color>
+    <color name="tencent_tls_ui_black">#000000</color>
+    <color name="tencent_tls_ui_titleBackground">#FFFFFF</color>
+    <color name="tencent_tls_ui_titleFontColor">#000000</color>
+    <color name="tencent_tls_ui_defaultButtonColor">#0099FF</color>
+    <color name="tencent_tls_ui_pressedButtonColor">#0066CC</color>
+    <color name="tencent_tls_ui_background">#EEEEEE</color>
+    <color name="tencent_tls_ui_transparent">#9000</color>
+
+
+    <color name="colorPrimaryDark">#303F9F</color>
+
+
+    <color name="background">#F9F7F8</color>
+    <color name="background_gray1">#EBEBEB</color>
+    <color name="background_gray2">#E6E6E6</color>
+    <color name="background_gray3">#D4D4D4</color>
+    <color name="background_gray4">#EFEFF4</color>
+    <color name="line">#DDDDDD</color>
+    <color name="line_btn">#BBBBBB</color>
+    <color name="text_gray1">#777777</color>
+    <color name="text_gray2">#767676</color>
+    <color name="text_blue1">#1173CB</color>
+    <color name="text_blue2">#1173CA</color>
+    <color name="panel_black">#25272A</color>
+    <color name="black">#000000</color>
+    <color name="btn_red">#D63F41</color>
+    <color name="btn_red_hover">#E8484B</color>
+    <color name="btn_blue">#0F73CB</color>
+    <color name="btn_blue_hover">#1E86E4</color>
+    <color name="btn_text">#FFFFFF</color>
+    <color name="btn_text_hover">#CCFFFFFF</color>
+    <color name="btn_live">#5F6164</color>
+    <color name="btn_live_press">#2F3134</color>
+    <!--蒙版-->
+    <color name="colorMask">#66000000</color>
+    <color name="dialog_btn_pressed_color">#efefef</color>
+
+
+    <!--app主色调，背景色-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <!--背景色-->
+    <color name="colorBackground">#F0F0F0</color>
+    <!--app主题色，应用于导航，按钮-->
+    <color name="colorTheme">#80407A</color>
+    <!--主题色激活态，如按钮高亮-->
+    <color name="colorThemeActive">#A15C9A</color>
+    <!--红色标签/提示-->
+    <color name="colorLabelRed">#FF447D</color>
+    <!--红色标签/提示高亮-->
+    <color name="colorLabelRedActive">#FF89AB</color>
+    <!--黄色色标签/提示-->
+    <color name="colorLabelYellow">#FFAE20</color>
+    <!--黄色色标签/提示高亮-->
+    <color name="colorLabelYellowActive">#FFCD35</color>
+    <!--黄色蒙版-->
+    <color name="colorLabelYellowMask">#4DFFAE20</color>
+    <!--红色-->
+    <color name="colorRed">#FF3333</color>
+    <!--文字白色-->
+    <color name="colorTextWhite">#FFFFFF</color>
+    <!--文字G1-->
+    <color name="colorTextG1">#CCCCCC</color>
+    <!--文字G2-->
+    <color name="colorTextG2">#999999</color>
+    <!--文字G3-->
+    <color name="colorTextG3">#666666</color>
+    <!--文字G4-->
+    <color name="colorTextG4">#333333</color>
+    <!--文字black-->
+    <color name="colorTextBlack">#000000</color>
+    <!--gray1-->
+    <color name="colorGray1">#F0F0F0</color>
+    <!--light gray-->
+    <color name="colorLightGray">#E6E6E6</color>
+    <!--gray2-->
+    <color name="colorGray2">#DCDCDC</color>
+    <!--gray3-->
+    <color name="colorGray3">#C8C8C8</color>
+    <!--gray4-->
+    <color name="colorGray4">#787878</color>
+    <!--gray5-->
+    <color name="colorGray5">#505050</color>
+    <!--gray6-->
+    <color name="colorGray6">#141414</color>
+
+
+    <color name="colorSendName">#9966cc</color>
+    <color name="colorSendName1">#FF3163</color>
+    <color name="colorSendName2">#973365</color>
+    <color name="colorSendName3">#006599</color>
+    <color name="colorSendName4">#D07E44</color>
+    <color name="colorSendName5">#97BC87</color>
+    <color name="colorSendName6">#FFAE1F</color>
+    <color name="colorSendName7">#FF437D</color>
+    <!--蒙版-->
+
+    <color name="widgets_general_row_pressed">#d9d9d9</color>
+    <color name="widgets_general_row_normal">#ffffff</color>
+    <color name="widgets_general_row_line">#e5e5e5</color>
+    <color name="general_background">#efeff4</color>
+    <color name="gray">#888888</color>
+    <color name="scan_bg">#7f000000</color>
+
+
+    <color name="circleindexview_out_gray">#99ffffff</color>
+    <color name="circleindexview_in_green">#53c41a</color>
+    <color name="circleindexview_in_white">#ffffff</color>
+
+
+    <color name="circleindexview_sub_gray">#c4c4c4</color>
+    <color name="circleindexview_main_text">#5b5b5b</color>
+</resources>

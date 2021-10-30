@@ -116,8 +116,8 @@ public class GangedRvActivity extends AppCompatActivity implements CheckListener
         } else {
             if (isMoved) {
                 isMoved = false;
-            } else
-                mSortAdapter.setCheckedPosition(position);
+            }
+            mSortAdapter.setCheckedPosition(position);
             ItemHeaderDecoration.setCurrentTag(String.valueOf(position));//如果是滑动右边联动左边，则按照右边传过来的位置作为tag
 
         }

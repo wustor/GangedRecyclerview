@@ -86,7 +86,12 @@ public class ItemHeaderDecoration extends RecyclerView.ItemDecoration {
         if (!TextUtils.equals(tag, currentTag)) {
             currentTag = tag;
             Integer integer = Integer.valueOf(tag);
-            mCheckListener.check(integer, false);
+            if (mCheckListener!=null){
+                mCheckListener.check(integer, false);
+            }else {
+                 Log.e("tag--->", "mCheckListener is Null");
+            }
+
         }
     }
 

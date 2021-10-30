@@ -1,13 +1,13 @@
-package com.fatchao.gangedrecyclerview;
+package com.feiyu.ganged;
 
 import android.graphics.Color;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,10 +63,11 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
                         break;
 
                 }
-                Snackbar snackbar = Snackbar.make(mRv, "当前点击的是" + content + ":" + mDatas.get(position).getName(), Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar
+                    .make(mRv, "当前点击的是" + content + ":" + mDatas.get(position).getName(), Snackbar.LENGTH_SHORT);
                 View mView = snackbar.getView();
                 mView.setBackgroundColor(Color.BLUE);
-                TextView text = (TextView) mView.findViewById(android.support.design.R.id.snackbar_text);
+                TextView text = (TextView) mView.findViewById(R.id.snackbar_text);
                 text.setTextColor(Color.WHITE);
                 text.setTextSize(25);
                 snackbar.show();

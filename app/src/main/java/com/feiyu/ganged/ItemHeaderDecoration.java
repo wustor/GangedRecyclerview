@@ -1,11 +1,8 @@
-package com.fatchao.gangedrecyclerview;
+package com.feiyu.ganged;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -14,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 

@@ -1,4 +1,4 @@
-package com.fatchao.gangedrecyclerview;
+package com.feiyu.ganged;
 
 import android.content.Context;
 import android.text.TextUtils;

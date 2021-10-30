@@ -11,7 +11,7 @@
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:background="@color/white_back"
             android:id="@+id/rv_sort"
             android:layout_width="0dp"

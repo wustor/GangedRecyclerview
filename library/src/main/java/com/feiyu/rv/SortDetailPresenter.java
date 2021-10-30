@@ -1,14 +1,13 @@
-package com.feiyu.ganged;
+package com.feiyu.rv;
+
 
 /**
  * author pangchao
- * created on 2017/5/10
+ * created on 2017/5/12
  * email fat_chao@163.com.
  */
 
-public class ClassifyPresenter extends BasePresenter {
-
-
+public class SortDetailPresenter extends BasePresenter {
     @Override
     protected void getData() {
 

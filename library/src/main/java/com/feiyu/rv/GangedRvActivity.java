@@ -1,4 +1,4 @@
-package com.feiyu.ganged;
+package com.feiyu.rv;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements CheckListener {
+public class GangedRvActivity extends AppCompatActivity implements CheckListener {
     private RecyclerView rvSort;
     private SortAdapter mSortAdapter;
     private SortDetailFragment mSortDetailFragment;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements CheckListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_ganged_rv);
         mContext = this;
     }
 

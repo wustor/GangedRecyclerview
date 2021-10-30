@@ -1,4 +1,4 @@
-package com.feiyu.ganged;
+package com.feiyu.rv;
 
 import android.os.Parcel;
 import android.os.Parcelable;

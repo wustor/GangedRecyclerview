@@ -1,4 +1,4 @@
-package com.feiyu.ganged;
+package com.feiyu.rv;
 
 public abstract class BasePresenter {
 

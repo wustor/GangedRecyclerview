@@ -10,11 +10,13 @@
 
     <TextView
         android:id="@+id/tv_sort"
+        android:paddingLeft="@dimen/dp_3"
+        android:paddingRight="@dimen/dp_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_6"
         android:gravity="center"
-        android:text="测试文字"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="14sp"/>
 

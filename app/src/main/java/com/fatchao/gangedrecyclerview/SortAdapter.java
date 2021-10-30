@@ -44,7 +44,7 @@ public class SortAdapter extends RvAdapter<String> {
 
         @Override
         public void bindHolder(String string, int position) {
-            tvName.setText("数据" + string);
+            tvName.setText(string);
             if (position == checkedPosition) {
                 mView.setBackgroundColor(Color.parseColor("#f3f3f3"));
                 tvName.setTextColor(Color.parseColor("#0068cf"));

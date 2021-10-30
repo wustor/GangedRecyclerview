@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +15,12 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
     private RecyclerView mRv;
     private ClassifyDetailAdapter mAdapter;
     private GridLayoutManager mManager;
-    private List<SortBean> mDatas = new ArrayList<>();
+    private List<RightBean> mDatas = new ArrayList<>();
     private ItemHeaderDecoration mDecoration;
     private boolean move = false;
     private int mIndex = 0;
     private CheckListener checkListener;
 
-    @Override
-    protected void getData() {
-
-    }
 
     @Override
     protected int getLayoutId() {
@@ -47,6 +42,7 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
     protected SortDetailPresenter initPresenter() {
         showRightPage(1);
         mManager = new GridLayoutManager(mContext, 3);
+        //通过isTitle的标志来判断是否是title
         mManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -81,23 +77,31 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
         mDecoration = new ItemHeaderDecoration(mContext, mDatas);
         mRv.addItemDecoration(mDecoration);
         mDecoration.setCheckListener(checkListener);
-        initData(mContext.getResources().getStringArray(R.array.pill));
+        initData();
         return new SortDetailPresenter();
     }
 
-    private void initData(final String[] data) {
-        for (int i = 0; i < data.length; i++) {
-            SortBean titleBean = new SortBean(String.valueOf(i));
-            titleBean.setTitle(true);//头部设置为true
-            titleBean.setTag(String.valueOf(i));
-            mDatas.add(titleBean);
-            for (int j = 0; j < 10; j++) {
-                SortBean sortBean = new SortBean(String.valueOf(i + "行" + j + "个"));
-                sortBean.setTag(String.valueOf(i));
-                mDatas.add(sortBean);
+
+    private void initData() {
+        ArrayList<SortBean.CategoryOneArrayBean> rightList = getArguments().getParcelableArrayList("right");
+        for (int i = 0; i < rightList.size(); i++) {
+            RightBean head = new RightBean(rightList.get(i).getName());
+            //头部设置为true
+            head.setTitle(true);
+            head.setTitleName(rightList.get(i).getName());
+            head.setTag(String.valueOf(i));
+            mDatas.add(head);
+            List<SortBean.CategoryOneArrayBean.CategoryTwoArrayBean> categoryTwoArray = rightList.get(i).getCategoryTwoArray();
+            for (int j = 0; j < categoryTwoArray.size(); j++) {
+                RightBean body = new RightBean(categoryTwoArray.get(j).getName());
+                body.setTag(String.valueOf(i));
+                String name = rightList.get(i).getName();
+                body.setTitleName(name);
+                mDatas.add(body);
             }
 
         }
+
         mAdapter.notifyDataSetChanged();
         mDecoration.setData(mDatas);
     }
@@ -113,33 +117,44 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
     }
 
     public void setData(int n) {
-        if (n < 0 || n >= mAdapter.getItemCount()) {
-            Toast.makeText(mContext, "超出范围了", Toast.LENGTH_SHORT).show();
-            return;
-        }
         mIndex = n;
         mRv.stopScroll();
         smoothMoveToPosition(n);
     }
+
+    @Override
+    protected void getData() {
+
+    }
+
     public void setListener(CheckListener listener) {
         this.checkListener = listener;
     }
+
     private void smoothMoveToPosition(int n) {
         int firstItem = mManager.findFirstVisibleItemPosition();
         int lastItem = mManager.findLastVisibleItemPosition();
+        Log.d("first--->", String.valueOf(firstItem));
+        Log.d("last--->", String.valueOf(lastItem));
         if (n <= firstItem) {
-            mRv.smoothScrollToPosition(n);
+            mRv.scrollToPosition(n);
         } else if (n <= lastItem) {
+            Log.d("pos---->", String.valueOf(n) + "VS" + firstItem);
             int top = mRv.getChildAt(n - firstItem).getTop();
-            mRv.smoothScrollBy(0, top);
+            Log.d("top---->", String.valueOf(top));
+            mRv.scrollBy(0, top);
         } else {
-            mRv.smoothScrollToPosition(n);
+            mRv.scrollToPosition(n);
             move = true;
         }
     }
 
 
+    @Override
+    public void check(int position, boolean isScroll) {
+        checkListener.check(position, isScroll);
 
+    }
 
 
     private class RecyclerViewListener extends RecyclerView.OnScrollListener {
@@ -161,11 +176,16 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
             super.onScrolled(recyclerView, dx, dy);
+            if (move) {
+                move = false;
+                int n = mIndex - mManager.findFirstVisibleItemPosition();
+                if (0 <= n && n < mRv.getChildCount()) {
+                    int top = mRv.getChildAt(n).getTop();
+                    mRv.scrollBy(0, top);
+                }
+            }
         }
     }
-    @Override
-    public void check(int position, boolean isScroll) {
-        checkListener.check(position, isScroll);
 
-    }
+
 }

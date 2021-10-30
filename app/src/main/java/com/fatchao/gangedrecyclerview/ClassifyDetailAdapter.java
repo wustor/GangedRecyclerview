@@ -5,13 +5,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import java.util.List;
 
 
-public class ClassifyDetailAdapter extends RvAdapter<SortBean> {
+public class ClassifyDetailAdapter extends RvAdapter<RightBean> {
 
-    public ClassifyDetailAdapter(Context context, List<SortBean> list, RvListener listener) {
+    public ClassifyDetailAdapter(Context context, List<RightBean> list, RvListener listener) {
         super(context, list, listener);
     }
 
@@ -31,7 +30,7 @@ public class ClassifyDetailAdapter extends RvAdapter<SortBean> {
         return new ClassifyHolder(view, viewType, listener);
     }
 
-    public class ClassifyHolder extends RvHolder<SortBean> {
+    public class ClassifyHolder extends RvHolder<RightBean> {
         TextView tvCity;
         ImageView avatar;
         TextView tvTitle;
@@ -51,15 +50,14 @@ public class ClassifyDetailAdapter extends RvAdapter<SortBean> {
         }
 
         @Override
-        public void bindHolder(SortBean sortBean, int position) {
+        public void bindHolder(RightBean sortBean, int position) {
             int itemViewType = ClassifyDetailAdapter.this.getItemViewType(position);
             switch (itemViewType) {
                 case 0:
-                    tvTitle.setText("测试数据" + sortBean.getTag());
+                    tvTitle.setText(sortBean.getName());
                     break;
                 case 1:
                     tvCity.setText(sortBean.getName());
-//                    avatar.setImageResource(R.mipmap.ic_launcher);
                     break;
             }
 

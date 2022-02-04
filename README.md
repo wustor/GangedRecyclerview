@@ -10,7 +10,7 @@
 4. 右侧联动左侧：
    滚动右侧列表，监听滚动的位置，左侧列表需要同步选中相应的列表
 
-<video width="540" height="1170" controls>     <source src="docs/device-2022-02-04-190625.mp4" type="video/mp4"> </video>
+![列表联动效果图](https://i.loli.net/2018/12/16/5c1601ff0a10c.gif)
 
 #### 接入文档
 

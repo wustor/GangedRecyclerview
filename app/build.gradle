@@ -26,6 +26,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.google.android.material:material:1.1.0'
     implementation project(path: ':library')
+//    implementation 'com.github.wustor:GangedRecyclerview:-0.0.1-g791b048-1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testImplementation 'junit:junit:4.12'

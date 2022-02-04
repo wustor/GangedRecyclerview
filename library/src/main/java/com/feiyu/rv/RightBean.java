@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by fatchao
  * 日期  2017-07-24.
- * 邮箱  fat_chao@163.com
+ * 邮箱  wustor@126.com
  */
 
 public class RightBean implements Parcelable {

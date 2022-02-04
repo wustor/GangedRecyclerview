@@ -3,10 +3,6 @@ plugins {
     id 'com.github.dcendents.android-maven'
 }
 
-group = 'com.github.wustor'
-version = '0.0.1'
-
-
 android {
     compileSdkVersion 30
 

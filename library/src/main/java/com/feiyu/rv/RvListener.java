@@ -3,7 +3,7 @@ package com.feiyu.rv;
 /**
  * Created by fatchao
  * 日期  2017/3/10.
- * 邮箱  fat_chao@163.com
+ * 邮箱  wustor@126.com
  */
 
 //RecyclerView的item点击事件

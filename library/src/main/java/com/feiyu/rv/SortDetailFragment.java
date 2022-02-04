@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.feiyu.rv.SortBean.CategoryOneArrayBean;
 import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 import java.util.List;
@@ -83,8 +84,8 @@ public class SortDetailFragment extends BaseFragment<SortDetailPresenter, String
 
 
   private void initData() {
-    ArrayList<SortBean.CategoryOneArrayBean> rightList = getArguments()
-        .getParcelableArrayList("right");
+    ArrayList<SortBean.CategoryOneArrayBean> rightList = (ArrayList<CategoryOneArrayBean>) getArguments()
+        .getSerializable(IIntent.DATA_RIGHT);
     for (int i = 0; i < rightList.size(); i++) {
       RightBean head = new RightBean(rightList.get(i).getName());
       //头部设置为true

@@ -8,6 +8,7 @@
   <Button
     android:id="@+id/tv_jump"
     android:text="联动RecyclerView"
+    android:textAllCaps="false"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"

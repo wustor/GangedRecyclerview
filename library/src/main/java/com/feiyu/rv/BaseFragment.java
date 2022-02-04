@@ -11,9 +11,9 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 /**
- * author pangchao
+ * author wustor
  * created on 2017/5/20
- * email fat_chao@163.com.
+ * email wustor@126.com.
  */
 
 public abstract class BaseFragment<T extends BasePresenter, V> extends Fragment implements View.OnClickListener, ViewCallBack<V> {

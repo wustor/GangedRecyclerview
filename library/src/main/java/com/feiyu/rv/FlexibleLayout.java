@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 
 /**
- * author pangchao
+ * author wustor
  * created on 2017/5/20
- * email fat_chao@163.com.
+ * email wustor@126.com.
  */
 
 public abstract class FlexibleLayout extends LinearLayout {

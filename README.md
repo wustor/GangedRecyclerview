@@ -28,7 +28,7 @@ allprojects {
 **Step 2.** Add the dependency
 
 ```groovy
-implementation 'com.github.wustor:GangedRecyclerview:latest-version'
+implementation 'com.github.wustor:GangedRecyclerview:1.0.0'
 ```
 
 **Step 3.** 启动GangedRvActivity
